@@ -74,23 +74,21 @@ function Header({ currentPage, setCurrentPage, darkMode, setDarkMode }) {
     };
 
     return (
-        <header className="bg-blue-600 text-white p-4 shadow-lg">
-            <div className="flex justify-between items-center">
-                <div className="flex items-center space-x-3">
-                    <div className="relative">
-                        <i className="fas fa-heartbeat text-3xl text-pink-300 animate-pulse"></i>
-                        <i className="fas fa-heart text-xl text-red-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></i>
-                    </div>
-                    <h1 className="text-xl font-bold">PNLE Reviewer ni Angel</h1>
+        <header className="bg-blue-600 text-white p-4 shadow-lg relative">
+            <div className="flex justify-center items-center gap-3">
+                <div className="relative">
+                    <i className="fas fa-heartbeat text-3xl text-pink-300 animate-pulse"></i>
+                    <i className="fas fa-heart text-xl text-red-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></i>
                 </div>
-                <button 
-                    onClick={toggleDarkMode}
-                    className="p-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110"
-                    aria-label="Toggle dark mode"
-                >
-                    <i className={`fas ${darkMode ? 'fa-sun text-yellow-300' : 'fa-moon text-blue-200'} text-xl`}></i>
-                </button>
+                <h1 className="text-xl font-bold">PNLE Reviewer ni Angel</h1>
             </div>
+            <button 
+                onClick={toggleDarkMode}
+                className="absolute top-4 right-4 p-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110"
+                aria-label="Toggle dark mode"
+            >
+                <i className={`fas ${darkMode ? 'fa-sun text-yellow-300' : 'fa-moon text-blue-200'} text-xl`}></i>
+            </button>
             <nav className="mt-4">
                 <ul className="flex flex-wrap justify-center gap-3">
                     {[

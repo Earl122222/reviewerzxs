@@ -193,7 +193,8 @@ function Dashboard({ setCurrentPage, examResults }) {
                     </p>
                     <button 
                         onClick={() => setCurrentPage('practice')}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+                        className="start-mock-exam-btn"
+                        style={{backgroundColor: '#2563eb', color: '#ffffff', fontWeight: 'bold', minHeight: '48px', padding: '12px 24px', border: 'none', borderRadius: '8px', fontSize: '18px', cursor: 'pointer'}}
                     >
                         Start Practice
                     </button>
@@ -209,7 +210,8 @@ function Dashboard({ setCurrentPage, examResults }) {
                     </p>
                     <button 
                         onClick={() => setCurrentPage('mock')}
-                        className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+                        className="start-mock-exam-btn"
+                        style={{backgroundColor: '#2563eb', color: '#ffffff', fontWeight: 'bold', minHeight: '48px', padding: '12px 24px', border: 'none', borderRadius: '8px', fontSize: '18px', cursor: 'pointer'}}
                     >
                         Start Mock Exam
                     </button>
@@ -535,7 +537,7 @@ function MockExamMode({ setCurrentPage, saveExamResult }) {
     if (!examStarted) {
         return (
             <div className="fade-in">
-                <h2 className="text-2xl font-bold mb-6">Mock Exam Mode</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-800">Mock Exam Mode</h2>
                 
                 <div className="card">
                     <h3 className="text-lg font-semibold mb-4">Exam Information</h3>
@@ -561,11 +563,13 @@ function MockExamMode({ setCurrentPage, saveExamResult }) {
                             <i className="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
                             <p>Results saved automatically</p>
                         </div>
+                     
                     </div>
                     
                     <button 
                         onClick={startExam}
-                        className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-lg border-2 border-blue-800 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+                        style={{minHeight: '48px', fontWeight: 'bold', color: '#ffffff'}}
                     >
                         Start Mock Exam
                     </button>

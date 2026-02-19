@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PNLE Reviewer- Philippine Nurse Licensure Examination</title>
+    <title>Reviewer ni Angel</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -118,8 +118,12 @@
             background-color: #713f12 !important;
         }
 
-        .dark .text-blue-700 {
-            color: #93c5fd !important;
+        .dark .bg-blue-600 {
+            background-color: #2563eb !important;
+        }
+
+        .dark .hover\:bg-blue-700:hover {
+            background-color: #1d4ed8 !important;
         }
 
         .dark .text-blue-800 {
@@ -176,6 +180,42 @@
 
         .dark .progress-fill {
             background-color: var(--primary-color) !important;
+        }
+
+        .start-mock-exam-btn {
+            background-color: #2563eb !important;
+            color: #ffffff !important;
+            font-weight: bold !important;
+            min-height: 48px !important;
+            padding: 12px 24px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 18px !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            transition: all 0.3s ease !important;
+            text-shadow: 0 0 3px rgba(255,255,255,0.8) !important;
+            z-index: 9999 !important;
+            position: relative !important;
+        }
+
+        .start-mock-exam-btn:hover {
+            background-color: #1d4ed8 !important;
+            transform: scale(1.05) !important;
+        }
+
+        .start-mock-exam-btn:active {
+            background-color: #1e40af !important;
+            transform: scale(0.95) !important;
+        }
+
+        /* Ensure orange buttons are visible in light mode */
+        .bg-orange-600 {
+            background-color: #ea580c !important;
+        }
+
+        .hover\:bg-orange-700:hover {
+            background-color: #c2410c !important;
         }
 
         .mobile-container {
