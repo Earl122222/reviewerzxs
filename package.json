@@ -1,0 +1,14 @@
+{
+  "name": "pnle-reviewer",
+  "version": "1.0.0",
+  "description": "PNLE Reviewer ni Angel - Philippine Nurse Licensure Examination Review App",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": ["pnle", "nursing", "examination", "reviewer", "philippines"],
+  "author": "Angel",
+  "license": "MIT",
+  "homepage": "https://pnle-reviewer.vercel.app"
+}

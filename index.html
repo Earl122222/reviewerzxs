@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNLE Reviewer- Philippine Nurse Licensure Examination</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --dark-bg: #1f2937;
+            --dark-card: #374151;
+            --dark-text: #f3f4f6;
+            --dark-text-secondary: #d1d5db;
+            --dark-border: #4b5563;
+            --dark-input-bg: #374151;
+            --dark-hover: #4b5563;
+        }
+
+        .dark {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .dark .card {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+        }
+
+        .dark h1,
+        .dark h2,
+        .dark h3,
+        .dark h4,
+        .dark h5,
+        .dark h6 {
+            color: var(--dark-text);
+        }
+
+        .dark p,
+        .dark span,
+        .dark div {
+            color: var(--dark-text);
+        }
+
+        .dark .text-gray-600 {
+            color: var(--dark-text-secondary) !important;
+        }
+
+        .dark .text-gray-800 {
+            color: var(--dark-text) !important;
+        }
+
+        .dark .text-gray-700 {
+            color: var(--dark-text-secondary) !important;
+        }
+
+        .dark .text-gray-500 {
+            color: var(--dark-text-secondary) !important;
+        }
+
+        .dark .bg-white {
+            background-color: var(--dark-card) !important;
+        }
+
+        .dark .bg-gray-50 {
+            background-color: var(--dark-input-bg) !important;
+        }
+
+        .dark .bg-gray-200 {
+            background-color: var(--dark-border) !important;
+        }
+
+        .dark .border-gray-200 {
+            border-color: var(--dark-border) !important;
+        }
+
+        .dark .border-gray-300 {
+            border-color: var(--dark-border) !important;
+        }
+
+        .dark .hover\:border-gray-300:hover {
+            border-color: var(--dark-hover) !important;
+        }
+
+        .dark .hover\:border-gray-400:hover {
+            border-color: var(--dark-hover) !important;
+        }
+
+        .dark .bg-blue-50 {
+            background-color: #1e3a8a !important;
+        }
+
+        .dark .bg-blue-100 {
+            background-color: #1e40af !important;
+        }
+
+        .dark .bg-orange-600 {
+            background-color: #ea580c !important;
+        }
+
+        .dark .hover\:bg-orange-700:hover {
+            background-color: #c2410c !important;
+        }
+
+        .dark .bg-green-50 {
+            background-color: #14532d !important;
+        }
+
+        .dark .bg-yellow-50 {
+            background-color: #713f12 !important;
+        }
+
+        .dark .text-blue-700 {
+            color: #93c5fd !important;
+        }
+
+        .dark .text-blue-800 {
+            color: #dbeafe !important;
+        }
+
+        .dark .text-green-700 {
+            color: #86efac !important;
+        }
+
+        .dark .text-green-800 {
+            color: #dcfce7 !important;
+        }
+
+        .dark .text-yellow-800 {
+            color: #fef3c7 !important;
+        }
+
+        .dark .text-red-600 {
+            color: #fca5a5 !important;
+        }
+
+        .dark .text-red-700 {
+            color: #fecaca !important;
+        }
+
+        .dark .text-red-800 {
+            color: #fee2e2 !important;
+        }
+
+        .dark .text-orange-500 {
+            color: #fb923c !important;
+        }
+
+        .dark .text-purple-500 {
+            color: #c084fc !important;
+        }
+
+        .dark .text-purple-600 {
+            color: #d8b4fe !important;
+        }
+
+        .dark input,
+        .dark select,
+        .dark textarea {
+            background-color: var(--dark-input-bg) !important;
+            color: var(--dark-text) !important;
+            border-color: var(--dark-border) !important;
+        }
+
+        .dark .progress-bar {
+            background-color: var(--dark-border) !important;
+        }
+
+        .dark .progress-fill {
+            background-color: var(--primary-color) !important;
+        }
+
+        .mobile-container {
+            max-width: 100%;
+            min-height: 100vh;
+        }
+
+        @media (min-width: 360px) {
+            .mobile-container {
+                padding: 0 1rem;
+            }
+        }
+
+        .card {
+            @apply bg-white rounded-lg shadow-md p-4 mb-4 transition-all duration-300 hover:shadow-lg;
+        }
+
+        .btn-primary {
+            @apply bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200;
+        }
+
+        .btn-secondary {
+            @apply bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200;
+        }
+
+        .btn-danger {
+            @apply bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-200;
+        }
+
+        .progress-bar {
+            @apply w-full bg-gray-200 rounded-full h-2;
+        }
+
+        .progress-fill {
+            @apply bg-blue-500 h-2 rounded-full transition-all duration-300;
+        }
+
+        .timer {
+            @apply text-lg font-bold text-orange-500;
+        }
+
+        .correct-answer {
+            @apply bg-green-100 border-green-500 text-green-700;
+        }
+
+        .incorrect-answer {
+            @apply bg-red-100 border-red-500 text-red-700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="root" class="mobile-container"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="questions-50percategory.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
